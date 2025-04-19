@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #FF5722;
+    --secondary-color: #333;
+    --background-color: #121212;
+    --card-bg: #1E1E1E;
+    --text-color: #ffffff;
+    --text-secondary: #B0B0B0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --nitro-color: #FF5722;
+    --speed-color: #4CAF50;
+    --shield-color: #2196F3;
+    --paint-color: #9C27B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.market-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.market-header h1 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.player-balance {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.player-balance svg {
+    margin-left: 0.3rem;
+}
+
+.market-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.item-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.item-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.item-icon.nitro {
+    background-color: rgba(255, 87, 34, 0.1);
+    border: 2px solid var(--nitro-color);
+}
+
+.item-icon.speed {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 2px solid var(--speed-color);
+}
+
+.item-icon.shield {
+    background-color: rgba(33, 150, 243, 0.1);
+    border: 2px solid var(--shield-color);
+}
+
+.item-icon.paint {
+    background-color: rgba(156, 39, 176, 0.1);
+    border: 2px solid var(--paint-color);
+}
+
+.item-icon svg {
+    fill: currentColor;
+}
+
+.item-icon.nitro svg {
+    color: var(--nitro-color);
+}
+
+.item-icon.speed svg {
+    color: var(--speed-color);
+}
+
+.item-icon.shield svg {
+    color: var(--shield-color);
+}
+
+.item-icon.paint svg {
+    color: var(--paint-color);
+}
+
+.item-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.item-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.item-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #FFD700;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.item-price::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: relative;
+}
+
+.buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #E64A19;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #333;
+}
+
+.back-btn svg {
+    fill: currentColor;
+}
