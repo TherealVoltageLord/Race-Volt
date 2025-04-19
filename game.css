@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #FF5722;
+    --secondary-color: #333;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --light-gray: #e0e0e0;
+    --dark-gray: #1E1E1E;
+    --card-bg: #242424;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --difficulty-easy: #4CAF50;
+    --difficulty-medium: #FFC107;
+    --difficulty-hard: #F44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-menu {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.game-header h1 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.track-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+.track {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.track:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track-preview {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#city-preview {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><rect width="100" height="50" fill="%23333"/><rect x="20" y="20" width="60" height="10" fill="%23ccc"/><rect x="25" y="25" width="10" height="5" fill="%23FF5722"/><rect x="45" y="25" width="10" height="5" fill="%23FF5722"/><rect x="65" y="25" width="10" height="5" fill="%23FF5722"/></svg>');
+}
+
+#desert-preview {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><rect width="100" height="50" fill="%23F5DEB3"/><rect x="15" y="25" width="70" height="5" fill="%23A0522D"/><circle cx="80" cy="15" r="10" fill="%23FFD700"/></svg>');
+}
+
+#mountain-preview {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><rect width="100" height="50" fill="%231E1E1E"/><polygon points="30,50 50,20 70,50" fill="%23666"/><polygon points="60,50 80,30 100,50" fill="%23444"/></svg>');
+}
+
+.track-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.track-overlay h3 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.track-difficulty span {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty-easy {
+    background-color: var(--difficulty-easy);
+}
+
+.difficulty-medium {
+    background-color: var(--difficulty-medium);
+    color: var(--secondary-color);
+}
+
+.difficulty-hard {
+    background-color: var(--difficulty-hard);
+}
+
+.game-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary svg {
+    fill: currentColor;
+}
+
+#game-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
