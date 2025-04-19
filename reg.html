@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Game - Register</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo">
+            <svg viewBox="0 0 100 50" width="200">
+                <path d="M10,35 L30,10 L70,10 L90,35 L80,40 L60,25 L40,25 L20,40 Z" fill="#FF5722"/>
+                <circle cx="30" cy="40" r="8" fill="#333"/>
+                <circle cx="70" cy="40" r="8" fill="#333"/>
+            </svg>
+            <h1>RACING LEGENDS</h1>
+        </div>
+        <form id="register-form" class="auth-form">
+            <div class="input-group">
+                <input type="text" id="reg-username" placeholder="Username" required>
+                <svg class="input-icon" viewBox="0 0 24 24" width="24">
+                    <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                </svg>
+            </div>
+            <div class="input-group">
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <svg class="input-icon" viewBox="0 0 24 24" width="24">
+                    <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"/>
+                </svg>
+            </div>
+            <div class="input-group">
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <svg class="input-icon" viewBox="0 0 24 24" width="24">
+                    <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"/>
+                </svg>
+            </div>
+            <button type="submit" class="btn-primary">REGISTER</button>
+        </form>
+        <p class="auth-link">Already have an account? <a href="index.html">Login now</a></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
