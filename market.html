@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="market.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="market-container">
+        <div class="market-header">
+            <h1>MARKETPLACE</h1>
+            <div class="player-balance">
+                <span id="market-coins">0</span>
+                <svg viewBox="0 0 24 24" width="20">
+                    <circle cx="12" cy="12" r="10" fill="#FFD700"/>
+                    <text x="12" y="16" text-anchor="middle" font-size="10" fill="#8B8000">$</text>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="market-items">
+            <div class="item-card">
+                <div class="item-icon nitro">
+                    <svg viewBox="0 0 24 24" width="40">
+                        <path d="M11,7H13V9H11V7M11,11H13V17H11V11M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20Z"/>
+                    </svg>
+                </div>
+                <h3>Nitro Boost</h3>
+                <p class="item-desc">+30% speed for 5 seconds</p>
+                <div class="item-footer">
+                    <span class="item-price">100</span>
+                    <button class="buy-btn" data-item="nitro">BUY</button>
+                </div>
+            </div>
+            
+            <div class="item-card">
+                <div class="item-icon speed">
+                    <svg viewBox="0 0 24 24" width="40">
+                        <path d="M12,16A3,3 0 0,1 9,13C9,11.88 9.61,10.9 10.5,10.39L20.21,4.77L14.68,14.35C14.18,15.33 13.17,16 12,16M12,3C13.81,3 15.5,3.5 16.97,4.32L14.87,5.53C14,5.19 13,5 12,5A8,8 0 0,0 4,13C4,15.21 4.89,17.21 6.34,18.65H6.35C6.74,19.04 6.74,19.67 6.35,20.06C5.96,20.45 5.32,20.45 4.93,20.07V20.07C3.12,18.26 2,15.76 2,13A10,10 0 0,1 12,3M22,13C22,15.76 20.88,18.26 19.07,20.07V20.07C18.68,20.45 18.05,20.45 17.66,20.06C17.27,19.67 17.27,19.04 17.66,18.65V18.65C19.11,17.2 20,15.21 20,13C20,12 19.81,11 19.46,10.1L20.67,8C21.5,9.5 22,11.18 22,13Z"/>
+                    </svg>
+                </div>
+                <h3>Speed Upgrade</h3>
+                <p class="item-desc">Permanent +5% max speed</p>
+                <div class="item-footer">
+                    <span class="item-price">500</span>
+                    <button class="buy-btn" data-item="speed">BUY</button>
+                </div>
+            </div>
+            
+            <div class="item-card">
+                <div class="item-icon shield">
+                    <svg viewBox="0 0 24 24" width="40">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.99H19V11C19,7.9 16.97,5.17 14,4.27V7H10V4.27C7.03,5.17 5,7.9 5,11V12H12V11.99Z"/>
+                    </svg>
+                </div>
+                <h3>Shield</h3>
+                <p class="item-desc">Protection from 1 collision</p>
+                <div class="item-footer">
+                    <span class="item-price">200</span>
+                    <button class="buy-btn" data-item="shield">BUY</button>
+                </div>
+            </div>
+            
+            <div class="item-card">
+                <div class="item-icon paint">
+                    <svg viewBox="0 0 24 24" width="40">
+                        <path d="M18,18V12H17V8H18V7C18,5.9 18.9,5 20,5H21V3H20A2,2 0 0,0 18,5V7H16V5A2,2 0 0,0 14,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H14A2,2 0 0,0 16,19V18H18M14,19H5V5H14V19M10,13.41L7.59,11L10,8.59L11.41,10L10,11.41V13.41M13.41,16L11,13.59L8.59,16L7,14.41L9.41,12L7,9.59L8.59,8L11,10.41L13.41,8L15,9.59L12.59,12L15,14.41L13.41,16Z"/>
+                    </svg>
+                </div>
+                <h3>Car Paint</h3>
+                <p class="item-desc">Custom color for your car</p>
+                <div class="item-footer">
+                    <span class="item-price">300</span>
+                    <button class="buy-btn" data-item="paint">BUY</button>
+                </div>
+            </div>
+        </div>
+        
+        <a href="game.html" class="back-btn">
+            <svg viewBox="0 0 24 24" width="20">
+                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+            </svg>
+            BACK TO GAME
+        </a>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
