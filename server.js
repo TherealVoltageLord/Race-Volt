@@ -7,7 +7,7 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
-const SECRET_KEY = 'your_secret_key_here';
+const SECRET_KEY = 'bK5IATaR6H8fNv5z';
 
 // Initialize SQLite database
 const db = new sqlite3.Database('./database.db', (err) => {
