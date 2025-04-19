@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #FF5722;
+    --secondary-color: #333;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --light-gray: #e0e0e0;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 87, 34, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 87, 34, 0.1) 0%, transparent 20%);
+}
+
+.auth-container {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.logo h1 {
+    font-family: 'Racing Sans One', cursive;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.logo svg {
+    margin: 0 auto;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--secondary-color);
+    opacity: 0.6;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: #E64A19;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.auth-link {
+    margin-top: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.auth-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
