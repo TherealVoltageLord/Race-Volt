@@ -1,0 +1,41 @@
+<div class="track-container">
+    <div class="track-header">
+        <h2>DESERT RALLY</h2>
+        <div class="track-time">00:00:00</div>
+    </div>
+    
+    <div class="game-canvas-container">
+        <canvas id="game-canvas" width="800" height="500"></canvas>
+    </div>
+    
+    <div class="game-controls">
+        <div class="controls-left">
+            <button class="control-btn" id="nitro-btn">NITRO</button>
+            <button class="control-btn" id="shield-btn">SHIELD</button>
+        </div>
+        <div class="controls-right">
+            <button class="control-btn" id="pause-btn">PAUSE</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const trackData = {
+            name: 'Desert Rally',
+            difficulty: 'medium',
+            background: '#F5DEB3',
+            roadColor: '#A0522D',
+            obstacles: [
+                { type: 'rock', color: '#795548', frequency: 0.03 },
+                { type: 'cactus', color: '#4CAF50', frequency: 0.02 }
+            ],
+            laps: 5,
+            timeLimit: 240
+        };
+        
+        if (window.initTrack) {
+            window.initTrack(trackData);
+        }
+    });
+</script>
