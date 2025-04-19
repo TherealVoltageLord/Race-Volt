@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Game</title>
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-menu">
+        <div class="game-header">
+            <h1>SELECT TRACK</h1>
+            <div class="player-info">
+                <span id="player-coins">1000</span>
+                <svg viewBox="0 0 24 24" width="20">
+                    <circle cx="12" cy="12" r="10" fill="#FFD700"/>
+                    <text x="12" y="16" text-anchor="middle" font-size="10" fill="#8B8000">$</text>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="track-options">
+            <div class="track" data-track="city">
+                <div class="track-preview" id="city-preview">
+                    <div class="track-overlay">
+                        <h3>CITY CIRCUIT</h3>
+                        <div class="track-difficulty">
+                            <span class="difficulty-easy">EASY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="track" data-track="desert">
+                <div class="track-preview" id="desert-preview">
+                    <div class="track-overlay">
+                        <h3>DESERT RALLY</h3>
+                        <div class="track-difficulty">
+                            <span class="difficulty-medium">MEDIUM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="track" data-track="mountain">
+                <div class="track-preview" id="mountain-preview">
+                    <div class="track-overlay">
+                        <h3>MOUNTAIN PASS</h3>
+                        <div class="track-difficulty">
+                            <span class="difficulty-hard">HARD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-actions">
+            <a href="profile.html" class="btn-secondary">
+                <svg viewBox="0 0 24 24" width="18">
+                    <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"/>
+                </svg>
+                PROFILE
+            </a>
+            <a href="market.html" class="btn-secondary">
+                <svg viewBox="0 0 24 24" width="18">
+                    <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
+                </svg>
+                MARKETPLACE
+            </a>
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <!-- Track content will be loaded here -->
+    </div>
+    
+    <script src="game-core.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
